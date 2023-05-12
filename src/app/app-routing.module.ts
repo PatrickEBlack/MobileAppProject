@@ -10,7 +10,19 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'art',
+    loadChildren: () => import('./art/art.module').then( m => m.ArtPageModule)
   },
+  {
+    path: 'credits',
+    loadChildren: () => import('./credits/credits.module').then( m => m.CreditsPageModule)
+  },
+  {
+    path: 'secret',
+    loadChildren: () => import('./secret/secret.module').then( m => m.SecretPageModule)
+  },
+
 ];
 
 @NgModule({

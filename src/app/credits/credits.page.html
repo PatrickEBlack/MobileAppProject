@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>About</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar style="text-align: end;">
+      <ion-title size="large">About</ion-title>
+      <!--Button To allow the user to return to their previous page-->
+      <ion-button color="warning" [routerLink]="['/home']" routerDirection="forward">Back</ion-button>
+    </ion-toolbar>
+  </ion-header>
+
+  <!--Container holding page contents; in this case The information on how the application works-->
+  <div id="container">
+    <h1>Creator: <b style="color:yellow;">Patrick Black</b></h1>
+    <h2>How the App works:</h2>
+    <p>This app works by prompting the user with a selection of all pokemon in the pokemon index. Found at "https://pokeapi.co/api/v2/pokemon?limit=12&offset=0".
+      This link will provide the data for the first 12 pokemon in the index. It will then return the name of the pokemon which will be integrated into our buttons 
+      on the main page. Once a selection is made, the user will be brought to an external website which contains pictures and data on the respective pokemon. You are 
+      also able to navigate between 4 pages.
+    </p>
+  </div>
+
+</ion-content>

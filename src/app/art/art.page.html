@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar style="text-align: end;">
+    <!-- <ion-buttons slot="end">
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons> -->
+    <ion-title>Art</ion-title>
+    <ion-button color="warning" [routerLink]="['/home']" routerDirection="forward">Back</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div id="container">
+  <!--The following code creates a button for each name in the array of pokemon stored in "https://pokeapi.co/api/v2/pokemon?limit=12&offset=0"-->
+  <ion-button color="warning" id="button" *ngFor="let x of myArt"(click)="openArtPage(x.name)">{{x.name}}</ion-button>
+  <!--Secret Button. Plese dont tell anyone about this... It's super secret-->
+  <ion-button [routerLink]="['/secret']" routerDirection="forward">secret button</ion-button>
+</div>
+</ion-content>

@@ -1,19 +1,21 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <ion-header [translucent]="true">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <!--Title-->
+      <ion-title>PokeDex</ion-title>
     </ion-toolbar>
   </ion-header>
+  
+  <!--EVERYTHING NAMED 'ART' IS NAMED AS SUCH BECAUSE I ORIGINALLY PLANNED ON DOING A MUSEUM APP WHERE YOU COULD VIEW DIFFERENT PAINTINGS-->
+  <!--IT CLEARLY DID NOT GO TO PLAN-->
 
+  <!--Container div to hold page contents-->
   <div id="container">
- <h3>Welcome to Mobile Apps Starter project 2023</h3>
+    <h1>This app is designed<br>to show you the different<br>types of pokemon</h1>
+    <!--button which will redirect user to art(Pokemon List) page-->
+    <ion-button color="success" [routerLink]="['/art']" routerDirection="forward" style="height: 80px; font-weight: bolder;">Enter App</ion-button>
+    <h2>You can also see how this app works by clicking below</h2>
+    <!--button whihc will redirect user to credits(About the App) page-->
+    <ion-button color="warning" [routerLink]="['/credits']" routerDirection="forward" style="height: 30px; font-weight: bolder;">See Guide</ion-button>
   </div>
 </ion-content>
